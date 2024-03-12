@@ -1,4 +1,4 @@
-package chap01_기본;
+package 기본1_개념_기본;
 
 /*
 	[1] 주석(comment)

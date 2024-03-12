@@ -1,4 +1,4 @@
-package chap01_기본;
+package 기본1_개념_기본;
 
 public class 기본1_개념04_출력문종류 {
 	public static void main(String[] args) {
