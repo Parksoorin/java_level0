@@ -10,8 +10,13 @@ public class 비교1_문제01_방정식1_문제 {
 
 		[정답]
 			24
-	*/
+		*/
+		
+		int a = 12 - 8 + 20;
+		
+		boolean result = a + 8 - 20 == 12; 
 
+		System.out.println(result);
 	}
 
 }
