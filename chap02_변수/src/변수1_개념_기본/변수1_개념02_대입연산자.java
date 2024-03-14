@@ -21,7 +21,7 @@ public class 변수1_개념02_대입연산자 {
 		// 대입 연산자를 통해서만 값이 변경된다.
 		// 연산자 우선순위가 대입연산자 보다 더하기 연산자가 우선 적용된다.
 		y = y + 1;
-		System.out.println(y);
+		System.out.println(y);	    	// 9
 		
 	}
 }

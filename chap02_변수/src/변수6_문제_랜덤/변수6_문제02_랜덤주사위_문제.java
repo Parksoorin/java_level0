@@ -20,6 +20,14 @@ public class 변수6_문제02_랜덤주사위_문제 {
 	            -2
 	    */  
 		
+		Random ran = new Random();
+		
+		int a = ran.nextInt(6) - 3;
+		int b = ran.nextInt(6) + 1;
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(a + b);
 
 	}
 

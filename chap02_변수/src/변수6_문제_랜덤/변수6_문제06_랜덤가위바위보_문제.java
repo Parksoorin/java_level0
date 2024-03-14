@@ -21,6 +21,13 @@ public class 변수6_문제06_랜덤가위바위보_문제 {
 	            결과 : 10
 	            	4 * 3 + 2 - 4;
 	    */
+		
+		Random ran = new Random();
+		
+		int a = ran.nextInt(6) + 1;
+		System.out.println(a);
+		
+		System.out.println(a * 3 + 2 - 4);
 
 	}
 
