@@ -1,5 +1,7 @@
 package 기타조건4_문제_삼항연산자;
 
+import java.util.Random;
+
 public class 기타조건문4_문제01_동전한개_문제 {
 	public static void main(String[] args) {
 		
@@ -15,7 +17,14 @@ public class 기타조건문4_문제01_동전한개_문제 {
 	            true
 	    */
 		
-	   int a = 0;
+		Random ran = new Random();
+		int a = ran.nextInt(2) + 1;
+		System.out.println(a);
+		
+		boolean result = true;
+		
+		result = a == 1 ? true : false;
+		System.out.println(result);
 		
 	}
 }

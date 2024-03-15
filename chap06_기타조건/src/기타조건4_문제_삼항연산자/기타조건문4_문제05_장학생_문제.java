@@ -1,5 +1,7 @@
 package 기타조건4_문제_삼항연산자;
 
+import java.util.Random;
+
 public class 기타조건문4_문제05_장학생_문제 {
 	public static void main(String[] args) {
 		
@@ -20,5 +22,17 @@ public class 기타조건문4_문제05_장학생_문제 {
 				"장학생"
 		*/
 		
+		Random ran = new Random();
+		int a = ran.nextInt(100) + 1;
+		int b = ran.nextInt(100) + 1;
+		
+		System.out.println(a);
+		System.out.println(b);
+		
+		boolean c = a == 100 || b == 100;
+		boolean d = (a + b) / 2 >= 80;
+		
+		String result = (c == true || d == true) ? "장학생" : "꽝";
+		System.out.println(result);
 	}
 }
