@@ -18,6 +18,16 @@ public class 반복문응용4_문제04_반복규칙찾기4_문제 {
 	            8 4
 	            9 4    
 	    */
+		
+		int a = 0;
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println(i + " " + a);
+			
+			if(i % 2 == 1) {
+				a++;
+			}
+		}
 
 	}
 }

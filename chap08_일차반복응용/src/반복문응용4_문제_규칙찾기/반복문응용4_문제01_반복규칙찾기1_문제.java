@@ -13,6 +13,17 @@ public class 반복문응용4_문제01_반복규칙찾기1_문제 {
 	            3 6 7
 	            4 8 9  
 	    */
+		
+		int a = 0;
+	    int b = 0;
+	    int c = 1;
+
+	    while(a < 5) {
+	        System.out.println(a + " " + b + " " + c);
+	        a += 1;
+	        b += 2;
+	        c += 2;
+	    }
 
 	}
 }

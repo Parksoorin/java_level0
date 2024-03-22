@@ -19,6 +19,16 @@ public class 반복문응용4_문제05_반복규칙찾기5_문제 {
 	            8 3
 	            9 1    
 	    */
+		
+		int a = 0;
+		
+		for(int i = 0; i < 10; i++) {
+			a++;
+			System.out.println(i + " " + a);
+			if(a == 3) {
+				a = 0;
+			}
+		}
 
 	}
 }

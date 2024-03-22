@@ -15,6 +15,17 @@ public class 반복문응용4_문제02_반복규칙찾기2_문제 {
 	            5 15
 	            6 21    
 	    */
+		
+		int a = 0;
+	    int b = 0;
+	    int num = 1;
+		
+		for(int i = 0; i < 7; i++) {
+			System.out.println(a + " " + b);
+			a += 1;
+	        b += num;
+	        num += 1;
+		}
 
 	}
 }

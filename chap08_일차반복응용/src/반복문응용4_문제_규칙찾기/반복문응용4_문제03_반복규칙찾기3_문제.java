@@ -18,6 +18,15 @@ public class 반복문응용4_문제03_반복규칙찾기3_문제 {
 	            8 -6
 	            9 -15   
 	    */
+		
+		int a = 30;
+		int num = 1;
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println(i + " " + a);
+			a -= num;
+			num++;
+		}
 
 	}
 }
