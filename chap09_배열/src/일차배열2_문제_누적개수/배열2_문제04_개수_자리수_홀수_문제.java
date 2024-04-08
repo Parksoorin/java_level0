@@ -15,6 +15,17 @@ public class 배열2_문제04_개수_자리수_홀수_문제 {
 	   
 	    int[] arr = {10, 33, 23, 13, 52};
 	    int count = 0;
+	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	int a = arr[i] / 10;
+	    	int b = arr[i] % 10;
+	    	
+	    	if((a*b)%2 == 1) {
+	    		count++;
+	    	}
+	    }
+	    
+	    System.out.println(count);
 	   
 	}
 

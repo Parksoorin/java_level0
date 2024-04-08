@@ -24,10 +24,26 @@ public class 배열2_문제05_학생관리_문제 {
 
 	    int[] numbers = {1001, 1002, 1003, 1004, 1005};
 	    int[] scores  = {  10,   32,   65,   90,   89};
+	    int count = 0;
+	    double total = 0;
+	    double avg = 0;
 	
-	
-	  
-
+	    for(int i = 0; i < numbers.length; i++) {
+	    	System.out.println(numbers[i] + "번 " + scores[i] + "점 ");
+	    	if(scores[i] >= 60) {
+	    		System.out.println("[합격]");
+	    		count++;
+	    	} else {
+	    		System.out.println("[불합격]");
+	    	}
+	    	total += scores[i];
+	    }
+	    
+	    avg = total / numbers.length;
+	    
+	    System.out.println("합격생 수 = " + count + "명");
+	    System.out.println("총점 = " + total + "점, 평균 = " + avg + "점");
+	 
 	}
 
 }

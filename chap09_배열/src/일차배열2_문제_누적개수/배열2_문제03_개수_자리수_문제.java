@@ -15,6 +15,14 @@ public class 배열2_문제03_개수_자리수_문제 {
 	    int count = 0;
 	   
 
+	    for(int i = 0; i < arr.length; i++) {
+	    	if((arr[i]%100 / 10) == 1) {
+	    		count++;
+	    	}
+	    }
+	    
+	    System.out.println(count);
+	    
 	}
 
 }

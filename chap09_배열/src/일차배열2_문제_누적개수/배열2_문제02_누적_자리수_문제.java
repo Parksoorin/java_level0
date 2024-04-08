@@ -14,7 +14,13 @@ public class 배열2_문제02_누적_자리수_문제 {
 	
 	    int total = 0;
 	    
-	   
+	    for(int i = 0; i < arr.length; i++) {
+	    	if((arr[i] % 100 / 10) == 2) {
+	    		total += arr[i];
+	    	}
+	    }
+	    
+	    System.out.println(total);
 
 	}
 
