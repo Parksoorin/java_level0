@@ -18,6 +18,15 @@ public class 배열3_문제01_배열비교_작은값_문제 {
 	    int[] a = {10, 43, 23, 12, 53};
 	    int[] b = {54,  6,  4, 12, 50};
 	
+	    for(int i = 0; i < a.length; i++) {
+	    	if(a[i] < b[i]) {
+	    		System.out.println(a[i]);
+	    	} else if(a[i] > b[i]){
+	    		System.out.println(b[i]);
+	    	} else {
+	    		System.out.println(a[i] + " " + b[i]);
+	    	}
+	    }
 	   
 	}
 

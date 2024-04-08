@@ -18,7 +18,16 @@ public class 배열3_문제03_배열비교_홀수짝수_문제 {
 	    
 	    int[] arr = {0, 0, 0, 0, 0};
 	
-	   
+	    for(int i = 0; i < a.length; i++) {
+	    	int sum = a[i] + b[i];
+	    	if(sum % 2 == 0) {
+	    		arr[i] = 2;
+	    	} else {
+	    		arr[i] = 1;
+	    	}
+	    }
+	    
+	    System.out.println(Arrays.toString(arr));
 
 	}
 
