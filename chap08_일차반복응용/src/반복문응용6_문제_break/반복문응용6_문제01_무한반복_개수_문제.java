@@ -11,5 +11,14 @@ public class 반복문응용6_문제01_무한반복_개수_문제 {
 				504
 		*/
 		
+		int a = 500;
+		
+		while(true) {
+			if(a % 28 == 0) {
+				break;
+			}
+			a++;
+		}
+		System.out.println(a);
 	}
 }

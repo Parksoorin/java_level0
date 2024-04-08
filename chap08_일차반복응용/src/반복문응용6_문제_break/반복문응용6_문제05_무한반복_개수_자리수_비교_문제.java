@@ -15,5 +15,19 @@ public class 반복문응용6_문제05_무한반복_개수_자리수_비교_문�
 				656
 		*/
 		
+		int a = 500;
+		int cnt = 0;
+		
+		while(true) {
+			int a1 = a % 10;
+			if(a % 8 == 0 && a1 == 6) {
+				System.out.println(a);
+				cnt++;
+				if(cnt == 4) {
+					break;
+				}
+			}
+			a++;
+		}
 	}
 }

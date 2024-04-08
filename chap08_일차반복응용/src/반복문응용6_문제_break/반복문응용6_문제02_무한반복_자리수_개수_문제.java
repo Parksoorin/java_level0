@@ -9,7 +9,15 @@ public class 반복문응용6_문제02_무한반복_자리수_개수_문제 {
 				단, break를 사용하시오.
 			[정답]
 				63
-		 */
+		*/
 		
+		int a = 60;
+		while(true) {
+			if(a % 9 == 0) {
+				break;
+			}
+			a++;
+		}
+		System.out.println(a);
 	}
 }

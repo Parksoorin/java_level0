@@ -13,5 +13,24 @@ public class 반복문응용6_문제03_무한반복_개수_빼기_문제 {
 				26
 		*/
 		
+		int cnt = 0;
+		int a = 13;
+		int a6 = 0;
+		int a4 = 0;
+		
+		while(true) {
+			if(a % 13 == 0) {
+				cnt++;
+				if(cnt == 4) {
+					a4 = a;
+				}
+				if(cnt == 6) {
+					a6 = a;
+					break;
+				}
+			}
+			a++;
+		}
+		System.out.println(a6 - a4);
 	}
 }
