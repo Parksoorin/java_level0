@@ -18,7 +18,12 @@ public class 배열1_문제11_회원탈퇴_문제 {
 	
 	    int[] numberList = {1001, 1002, 1003, 1004, 1005};
 	    int[] removeList  = {  1,   1,   -1,   -1,   1};
-	
+	    
+	    for(int i = 0; i < numberList.length; i++) {
+	    	if(removeList[i] == 1) {
+	    		System.out.println(numberList[i]);
+	    	}
+	    }
 	    
 	}
 

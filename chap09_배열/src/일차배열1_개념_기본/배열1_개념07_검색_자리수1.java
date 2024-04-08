@@ -20,7 +20,6 @@ public class 배열1_개념07_검색_자리수1 {
 	        	System.out.println(arr[i]);
 	        }
 	    }
-
 	}
 
 }

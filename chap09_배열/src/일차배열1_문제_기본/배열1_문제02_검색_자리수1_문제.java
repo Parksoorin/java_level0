@@ -13,7 +13,12 @@ public class 배열1_문제02_검색_자리수1_문제 {
 	    
 	    int[] arr = {1210, 1343, 1524, 1212, 7452};
 	
-	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	int a = arr[i] % 1000 / 100;
+	    	if(a == 2) {
+	    		System.out.println(arr[i]);
+	    	}
+	    }
 
 	}
 

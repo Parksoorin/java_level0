@@ -15,6 +15,11 @@ public class 배열1_문제03_검색_자리수2_문제 {
 	    
 	    int[] arr = {510, 423, 124, 512, 252, 23, 312, 453, 122};
 	
+	    for(int i=0; i < arr.length; i++) {
+	        if((arr[i] % 100 / 10) == 2) {
+	        	System.out.println(arr[i]);
+	        }
+	    }
 	  
 	}
 

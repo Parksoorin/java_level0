@@ -12,7 +12,12 @@ public class 배열1_문제01_검색_배수_문제 {
 	    */
 	
 	    int[] arr = {10, 43, 24, 12, 52};
-	
+	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	if(arr[i]%3 == 0) {
+	    		System.out.println(arr[i]);
+	    	}
+	    }
 	  
 	}
 

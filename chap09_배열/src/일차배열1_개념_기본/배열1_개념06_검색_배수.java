@@ -15,7 +15,6 @@ public class 배열1_개념06_검색_배수 {
 	            System.out.println(arr[i]);
 	        }
 	    }
-
 	}
-
+	
 }

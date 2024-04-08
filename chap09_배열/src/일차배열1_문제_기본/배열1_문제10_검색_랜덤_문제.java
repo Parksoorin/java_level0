@@ -22,6 +22,10 @@ public class 배열1_문제10_검색_랜덤_문제 {
 	    int[] numbers = {1001, 1002, 1003, 1004, 1005};
 	    int[] scores  = {  87,   11,   45,   98,   23};
 	
+	    int r = ran.nextInt(numbers.length);
+	    System.out.println(r);
+	    
+	    System.out.println(numbers[r] + ", " + scores[r]);
 
 	}
 

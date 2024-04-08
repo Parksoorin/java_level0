@@ -15,6 +15,12 @@ public class 배열1_문제06_값변경1_문제 {
 
 	    int arr[] = {10, 43, 24, 12, 52};
 	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	if(arr[i]%2 == 0) {
+	    		arr[i]++;
+	    	}
+	    }
+	    System.out.println(Arrays.toString(arr));
 
 	}
 

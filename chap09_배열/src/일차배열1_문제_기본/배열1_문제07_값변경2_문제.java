@@ -14,8 +14,14 @@ public class 배열1_문제07_값변경2_문제 {
 	
 	    int[] arr = {10, 43, 24, 12, 52};
 	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	int a = arr[i]/10;
+	    	int b = arr[i]%10;
+	    	arr[i] = a + b;
+	    }
 	    
-
+	    System.out.println(Arrays.toString(arr));
+	    
 	}
 
 }
