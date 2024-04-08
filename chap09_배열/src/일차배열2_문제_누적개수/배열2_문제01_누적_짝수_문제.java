@@ -14,6 +14,14 @@ public class 배열2_문제01_누적_짝수_문제 {
 	
 	   int total = 0;
 	   
+	   for(int i = 0; i < arr.length; i++) {
+		   if(arr[i]%2 == 0) {
+			   total += arr[i];
+		   }
+	   }
+	   
+	   System.out.println(total);
+	   
 	}
 
 }
