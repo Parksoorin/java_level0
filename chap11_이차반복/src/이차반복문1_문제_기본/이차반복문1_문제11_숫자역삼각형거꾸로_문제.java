@@ -16,7 +16,16 @@ public class 이차반복문1_문제11_숫자역삼각형거꾸로_문제 {
 	            7    
 	    */
 	
-	   
+		int cnt = 7;
+		int num = 1;
+		for(int i = 0; i < 7; i++) {
+			for(int j = num; j <= 7; j++) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+			num++;
+			cnt--;
+		}
 
 	}
 
