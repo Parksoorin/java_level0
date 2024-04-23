@@ -13,7 +13,14 @@ public class 이차반복문1_문제05_숫자두개역삼각형_문제 {
 	            1 2    
 	    */
 	
-	   
+		int cnt = 8;
+		for(int i = 0; i < 4; i++) {
+			for(int j = 1; j <= cnt; j++){
+				System.out.print(j + " ");
+			}
+			System.out.println();
+			cnt -= 2;
+		}
 
 	}
 

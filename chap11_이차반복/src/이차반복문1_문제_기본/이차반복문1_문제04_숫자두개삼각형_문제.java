@@ -13,7 +13,14 @@ public class 이차반복문1_문제04_숫자두개삼각형_문제 {
 	            1 2 3 4 5 6 7 8   
 	    */
 	
-	   
+		int cnt = 2;
+		for(int i = 0; i < 4; i++) {
+			for(int j = 1; j <= cnt; j++){
+				System.out.print(j + " ");
+			}
+			System.out.println();
+			cnt += 2;
+		}
 
 	}
 

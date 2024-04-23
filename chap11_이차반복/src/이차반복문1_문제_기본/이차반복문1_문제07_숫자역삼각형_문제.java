@@ -14,7 +14,14 @@ public class 이차반복문1_문제07_숫자역삼각형_문제 {
 	            1    
 	    */
 	
-	  
+		int cnt = 5;
+		for(int i = 0; i < 5; i++) {
+			for(int j = 1; j <= cnt; j++){
+				System.out.print(j + " ");
+			}
+			System.out.println();
+			cnt -= 1;
+		}
 
 	}
 

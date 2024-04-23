@@ -28,8 +28,13 @@ public class 이차반복문1_문제01_구구단_문제 {
 	            9 X 8 = 72
 	            9 X 9 = 81    
 	    */
-	
+		
+		for(int i = 2; i <= 9; i++) {
+			for(int j = 1; j <= 9; j++) {
+				System.out.println(i + " X " + j + " = " + (j * i));
+			}
+			System.out.println(" ");
+		}
 	    
 	}
-
 }

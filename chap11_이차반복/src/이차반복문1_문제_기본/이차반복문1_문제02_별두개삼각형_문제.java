@@ -13,6 +13,14 @@ public class 이차반복문1_문제02_별두개삼각형_문제 {
 	            ********    
 	    */
 	
+		int cnt = 2;
+		for(int i = 0; i < 4; i++) {
+			for(int j = 0; j < cnt; j++) {
+				System.out.print("*");
+			}
+			System.out.println(" ");
+			cnt += 2;
+		}
 	   
 	}
 
