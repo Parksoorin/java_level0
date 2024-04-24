@@ -20,6 +20,18 @@ public class 이차반복문2_문제02_규칙찾기2_문제 {
 	            18 17 16   
 	    */
 		
+		Random ran = new Random();
+		int r = ran.nextInt(4) + 3;
+		int num = 3;
+		
+		for(int i = 0; i < r; i++) {
+			for(int j = 0; j < 3; j++) {
+				System.out.print((num - j) + " ");
+			}
+			System.out.println();
+			num += 3;
+		}
+		
 
 	}
 
