@@ -19,6 +19,29 @@ public class 이차반복문2_문제06_규칙찾기6_문제 {
 	            3 2 1   
 	    */
 		
+		Random ran = new Random();
+		int r = ran.nextInt(4) + 3;
+		System.out.println("r = " + r);
+		
+		int num = r;
+		
+		for(int i = 0; i < r - 2; i++) {
+			for(int j = 0; j < 3; j++) {
+				System.out.print(num + " ");
+				num--;
+			}
+			System.out.println();
+			num += 2;
+		}
+		
+//		for(int i=0; i < r - 2; i++) {
+//	        int num = r - i;
+//	        for(int j = 0; j < 3; j++) {
+//	        	System.out.print(num - j + " ");
+//	        }
+//	        System.out.println();
+//	    }
+		
 
 	}
 
