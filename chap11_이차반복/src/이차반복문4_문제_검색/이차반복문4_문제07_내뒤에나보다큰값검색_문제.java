@@ -20,7 +20,16 @@ public class 이차반복문4_문제07_내뒤에나보다큰값검색_문제 {
 
 	    int[] arr = {10, 20, 30, 40, 30, 10, 50, 60};
 
-	
+	    for(int i = 0; i < arr.length; i++) {
+	    	for(int j = i + 1; j < arr.length; j++) {
+	    		if(i == arr.length - 1) {
+	    			continue;
+	    		} else if(arr[j] > arr[i]) {
+	    			System.out.print(arr[j] + " ");
+	    		}
+	    	}
+	    	System.out.println(" = " + arr[i]);
+	    }
 		
 	}
 }

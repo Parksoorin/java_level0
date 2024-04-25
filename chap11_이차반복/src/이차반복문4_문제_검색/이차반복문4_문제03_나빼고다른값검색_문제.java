@@ -21,6 +21,17 @@ public class 이차반복문4_문제03_나빼고다른값검색_문제 {
 
 	    int[] arr = {10, 20, 30, 40, 30, 10, 50, 60};
 	  
-	  
+	    for(int i = 0; i < arr.length; i++) {
+	    	for(int j = 0; j < arr.length; j++) {
+	    		if(i == j) {
+	    			System.out.print("*" + " ");
+	    		} else if(arr[i] == arr[j]) {
+	    			System.out.print("#" + " ");
+	    		} else {
+	    			System.out.print(arr[j] + " ");	    			
+	    		}
+	    	}
+	    	System.out.println();
+	    }
 	}
 }

@@ -20,5 +20,16 @@ public class 이차반복문4_문제01_나보다큰값검색_문제 {
 
 	    int[] arr = {10, 20, 30, 40, 30, 10, 50, 60};
 
+	    for(int i = 0; i < arr.length; i++) {
+	    	int a = arr[i];
+	    	for(int j = 0; j < arr.length; j++) {
+	    		if(arr[j] > a) {
+	    			System.out.print(arr[j] + " ");
+	    		} else {
+	    			System.out.print(0 + " ");
+	    		}
+	    	}
+	    	System.out.println();
+	    }
 	}
 }

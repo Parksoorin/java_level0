@@ -20,7 +20,16 @@ public class 이차반복문4_문제06_내앞에큰값검색_문제 {
 
 	    int[] arr = {10, 20, 30, 40, 30, 10, 50, 60};
 
-	   
+	    for(int i = 0; i < arr.length; i++) {
+	    	for(int j = 0; j < i + 1; j++) {
+	    		if(i == 0) {
+	    			continue;
+	    		} else if(arr[j] > arr[i]){
+	    			System.out.print(arr[j] + " ");
+	    		}
+	    	}
+	    	System.out.println(" = " + arr[i]);
+	    }
 		
 	}
 }
