@@ -19,7 +19,19 @@ public class 이차반복문3_문제07_약수여러개개수_문제 {
 
 	    
 	    int[] arr = {43, 55, 65, 11};
-	    int[] count;
+	    int[] count = new int[4];
+	    
+	    for(int i = 0; i < arr.length; i++) {
+	    	int cnt = 0;
+	    	for(int j = 1; j <= arr[i]; j++) {
+	    		if(arr[i] % j == 0) {
+	    			System.out.print(j + " ");
+	    			cnt++;
+	    		}
+	    	}
+	    	count[i] = cnt;
+	    	System.out.println();
+	    }
 
 	}
 }

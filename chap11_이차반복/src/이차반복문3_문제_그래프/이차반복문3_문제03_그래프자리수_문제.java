@@ -19,6 +19,25 @@ public class 이차반복문3_문제03_그래프자리수_문제 {
 	            9=*********
 	    */
 		
+		Random ran = new Random();
+		int arr[] = new int[5];
+		
+		for(int i = 0; i < 5; i++) {
+			int r = ran.nextInt(90) + 10;
+			arr[i] = r;
+		}
+		System.out.println(Arrays.toString(arr));
+		
+		for(int i = 0; i < 5; i++) {
+			int a = arr[i]/10;
+			int b = arr[i]%10;
+			System.out.print((a+b) + " = ");
+			for(int j = 0; j < a + b; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
 		
 	}
 }
