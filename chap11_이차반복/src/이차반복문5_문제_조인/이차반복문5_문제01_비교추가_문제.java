@@ -18,7 +18,16 @@ public class 이차반복문5_문제01_비교추가_문제 {
 	    int[] b = {10,  5, 20,  9};
 	    int[] c = new int[4];
 
-	    
+	    int index = 0;
+	    for(int i = 0; i < a.length; i++) {
+	    	for(int j = 0; j < b.length; j++) {
+	    		if(a[i] == b[j]) {
+	    			c[index] = a[i];
+	    			index++;
+	    		}
+	    	}
+	    }
+	    System.out.println(Arrays.toString(c));
 
 	}
 }

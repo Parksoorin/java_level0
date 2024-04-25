@@ -19,7 +19,20 @@ public class 이차반복문5_문제02_중복값짝수_문제 {
 	    int[] b = {1, 6, 2,  9, 3, 7};
 	    int[] c = new int[6];
 
-	  
-		
+	    int index = 0;
+	    
+	    for(int i = 0; i < a.length; i++) {
+	    	for(int j = 0; j < b.length; j++) {
+	    		if(a[i] % 2 == 0) {
+	    			if(a[i] == b[j]) {
+	    				c[index] = a[i];
+	    				index++;
+	    			}
+	    		} else {
+	    			continue;
+	    		}
+	    	}
+	    }
+		System.out.println(Arrays.toString(c));
 	}
 }
