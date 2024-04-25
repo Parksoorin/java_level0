@@ -19,7 +19,23 @@ public class 이차반복문3_문제01_그래프_문제 {
 	            4 : ****  
 	    */
 	
+		Random ran = new Random();
+		int arr[] = new int[5];
+		System.out.println(Arrays.toString(arr));
+	
+		for(int i = 0; i < 5; i++) {
+			int r = ran.nextInt(10);
+			arr[i] = r;
+		}
+		System.out.println(Arrays.toString(arr));
 		
+		for(int i = 0; i < 5; i++) {
+			System.out.print(arr[i] + " : ");
+			for(int j = 0; j < arr[i]; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 
 	}
 
