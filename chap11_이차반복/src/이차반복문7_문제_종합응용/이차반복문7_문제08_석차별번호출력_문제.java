@@ -16,6 +16,15 @@ public class 이차반복문7_문제08_석차별번호출력_문제 {
 	    int[] numList   = {1001, 1002, 1003, 1004};
 	    int[] scoreList = {  87,   42,   11,   98};
 
+	    for(int i = 0; i < scoreList.length; i++) {
+	    	int cnt = 1;
+	    	for(int j = 0; j < scoreList.length; j++) {
+	    		if(scoreList[i] < scoreList[j]) {
+	    			cnt++;
+	    		}
+	    	}
+	    	System.out.println(numList[i] + " " + cnt);
+	    }
 	   
 	}
 }

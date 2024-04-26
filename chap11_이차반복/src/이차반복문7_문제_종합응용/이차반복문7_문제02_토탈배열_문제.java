@@ -29,8 +29,17 @@ public class 이차반복문7_문제02_토탈배열_문제 {
 		
 	    int[] total = new int[10];
 
-	   
-
+	    for(int i = 0; i < 10; i++) {
+	    	int sum = 0;
+	    	for(int j = 0; j < 5; j++) {
+	    		int r = ran.nextInt(9) + 1;
+	    		sum += r;
+	    		System.out.print(r + " ");
+	    	}
+	    	System.out.println(": " + sum);
+	    	total[i] = sum;
+	    }
+	    System.out.println("total = " + Arrays.toString(total));
 
 		
 	}

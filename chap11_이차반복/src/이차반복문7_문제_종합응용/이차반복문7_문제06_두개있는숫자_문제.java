@@ -16,7 +16,29 @@ public class 이차반복문7_문제06_두개있는숫자_문제 {
 	    int[] arr = {10, 20, 30, 40, 40, 10, 30, 10, 50};
 	    int[] result = new int[arr.length];
 
-	    
+	    int index = 0;
+	    for(int i = 0; i < arr.length; i++) {
+	    	int num = 0;
+	    	int cnt = 0;
+	    	int cnt2 = 0;
+	    	for(int j = 0; j < arr.length; j++) {
+	    		if(arr[i] == arr[j]) {
+	    			cnt++;
+	    		}
+	    	}
+	    	if(cnt == 2) {
+		    	for(int j = 0; j < result.length; j++) {
+		    		if(arr[i] == result[j]) {
+		    			cnt2++;
+		    		}
+		    	}
+		    	if(cnt2 == 0) {
+		    		result[index] = arr[i];
+		    		index++;
+		    	}
+	    	}
+	    }
+	    System.out.println(Arrays.toString(result));
 		
 	}
 }

@@ -29,8 +29,29 @@ public class 이차반복문7_문제05_맥스게임_문제 {
 		Random ran = new Random();
 		
 	    int[] arr = {11, 87, 42, 100, 24};
+	    int cnt = 0;
 
-	    
+	    while(true) {
+	    	int r = ran.nextInt(5);
+	    	System.out.println("랜덤 : " + r);
+	    	
+	    	int max = 0;
+	    	int index = 0;
+	    	for(int i = 0; i < arr.length; i++) {
+	    		if(arr[i] > max) {
+	    			max = arr[i];
+	    			index = i;
+	    		}
+	    	}
+	    	if(r == index) {
+	    		arr[index] = 0;
+	    		cnt++;
+	    	}
+	    	System.out.println(Arrays.toString(arr));
+	    	if(cnt == arr.length) {
+	    		break;
+	    	}
+	    }
 		
 	}
 }

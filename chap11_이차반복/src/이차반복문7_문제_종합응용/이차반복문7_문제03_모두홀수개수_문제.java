@@ -24,8 +24,22 @@ public class 이차반복문7_문제03_모두홀수개수_문제 {
 		
 	    int[] total = new int[5];
 
-	    
-
-
+	    for(int i = 0; i < 5; i++) {
+	    	int cnt = 0;
+	    	for(int j = 0; j < 4; j++) {
+	    		int r = ran.nextInt(9) + 1;
+	    		System.out.print(r + " ");
+	    		if(r % 2 == 0) {
+	    			cnt++;
+	    		}
+	    	}	    	
+	    	if(cnt == 0){
+	    		total[i] = 1;
+	    	} else {
+	    		total[i] = 2;
+	    	}
+	    	System.out.println("==> total = " + Arrays.toString(total));
+	    }
+	  
 	}
 }

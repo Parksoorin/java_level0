@@ -20,8 +20,31 @@ public class 이차반복문7_문제07_약수별개수_문제 {
 	    int[] divList = new int[20];
 	    int[] arrList = new int[20];
 
-	   
+	    int index = 0;
 	    
-		
+	    for(int i = 0; i < numberList.length; i++) {
+	    	for(int j = 1; j <= numberList[i]; j++) {
+	    		if(numberList[i] % j == 0) {
+	    			divList[index] = j;
+	    			index++;
+	    		}
+	    	}
+	    }
+	    System.out.println(Arrays.toString(divList));
+	    
+		int index2 = 0;
+		for(int i = 0; i < divList.length; i++) {
+			int cnt = 0;
+			for(int j = 0; j < arrList.length; j++) {
+				if(divList[i] == arrList[j]) {
+					cnt++;
+				}
+			}
+			if(cnt == 0) {
+				arrList[index2] = divList[i];
+				index2++;
+			}
+		}
+	    System.out.println(Arrays.toString(arrList));
 	}
 }

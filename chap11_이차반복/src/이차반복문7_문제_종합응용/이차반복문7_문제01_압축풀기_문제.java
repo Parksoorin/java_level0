@@ -23,6 +23,12 @@ public class 이차반복문7_문제01_압축풀기_문제 {
 
 	    String b = "";
 
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < count[i]; j++) {
+				b += arr[i];
+			}
+		}
 		
+		System.out.println(b);
 	}
 }
