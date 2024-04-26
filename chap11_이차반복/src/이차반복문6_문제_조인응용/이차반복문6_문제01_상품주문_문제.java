@@ -25,7 +25,15 @@ public class 이차반복문6_문제01_상품주문_문제 {
 
 	    int[] order = {1003, 1001, 1003, 1003, 1004, 1002, 1001};
 
-	  
-
+	    int total = 0;
+	    for(int i = 0; i < order.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(order[i] == item[j]) {
+	    			System.out.println(order[i] + " " + price[j]);
+	    			total += price[j];
+	    		}
+	    	}
+	    }
+	    System.out.println(total);
 	}
 }

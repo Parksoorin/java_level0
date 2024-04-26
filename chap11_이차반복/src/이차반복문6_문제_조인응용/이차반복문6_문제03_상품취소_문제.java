@@ -25,7 +25,14 @@ public class 이차반복문6_문제03_상품취소_문제 {
 
 	    int[] cancel = {1002,1004,1003};
 	    
-
-		
+	    for(int i = 0; i < cancel.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(cancel[i] == item[j]) {
+	    			System.out.println(cancel[i] + "번 " + price[j] + "원");
+	    			total -= price[j];
+	    		}
+	    	}
+	    }
+		System.out.println("오늘의 최종 매출 = " + total);
 	}
 }

@@ -35,8 +35,21 @@ public class 이차반복문6_문제04_상품재고_문제 {
 
 	    int[] order = {1001, 1002, 1004, 1004, 1003, 1003, 1002};
 
-	   
-
-		
+	    int total = 0;
+	    
+	    for(int i = 0; i < order.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(order[i] == item[j]) {
+	    			if(count[j] > 0) {
+	    				total += price[j];
+	    				count[j] = count[j] -1;
+	    				System.out.println("order = " + (j + 1) + ", count = " + Arrays.toString(count));
+	    			} else {
+	    				System.out.println("order = " + (j + 1) + ", 주문불가");
+	    			}
+	    		}
+	    	}
+	    }
+	    System.out.println("매출 = " + total);
 	}
 }

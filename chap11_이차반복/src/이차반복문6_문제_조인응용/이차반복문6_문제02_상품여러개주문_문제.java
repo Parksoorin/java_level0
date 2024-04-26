@@ -42,9 +42,18 @@ public class 이차반복문6_문제02_상품여러개주문_문제 {
 
 	    int[] order = {1001, 1002, 1004, 1004, 1003, 1003, 1002};
 	    int[] orderCount = {3, 2, 2, 1, 3, 4, 3};
+	    
+	    int total = 0;
 
-	   
-	  
+	    for(int i = 0; i < order.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(order[i] == item[j]) {
+	    			System.out.println(order[i] + " " + price[j] + " " + orderCount[i]);
+	    			total += price[j] * orderCount[i];
+	    		}
+	    	}
+	    }
+	    System.out.println(total);
 
 	}
 }
