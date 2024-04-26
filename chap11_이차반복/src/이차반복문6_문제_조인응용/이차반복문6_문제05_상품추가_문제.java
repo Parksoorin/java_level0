@@ -32,6 +32,13 @@ public class 이차반복문6_문제05_상품추가_문제 {
 
 	    int[] add = {1001, 1002, 1004, 1004, 1003, 1003, 1002};
 
-	    
+	    for(int i = 0; i < add.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(add[i] == item[j]) {
+	    			count[j] += 1;
+	    			System.out.println("item = " + item[j] + " count = " + Arrays.toString(count));
+	    		}
+	    	}
+	    }
 	}
 }

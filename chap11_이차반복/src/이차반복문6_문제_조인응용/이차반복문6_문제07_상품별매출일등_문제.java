@@ -45,7 +45,24 @@ public class 이차반복문6_문제07_상품별매출일등_문제 {
 	    int[] order = {1001, 1002, 1004, 1004, 1003, 1003, 1002};
 	    int[] orderCount = {3, 2, 2, 1, 3, 4, 3};
 
-
-	 
+	    for(int i = 0; i < order.length; i++) {
+	    	for(int j = 0; j < item.length; j++) {
+	    		if(order[i] == item[j]){
+	    			total[j] += price[j] * orderCount[i];
+	    		}
+	    	}
+	    }
+	    System.out.println(Arrays.toString(total));
+	    
+	    int max = 0;
+	    int index = 0;
+	    for(int i = 0; i < total.length; i++) {
+	    	if(total[i] > max) {
+	    		max = total[i];
+	    		index = i;
+	    	}
+	    }
+	    System.out.println("매출 1등 = " + item[index] + ", " + total[index]);
+	    
 	}
 }
