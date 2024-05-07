@@ -17,11 +17,26 @@ public class 함수1_문제04_연산자게임_문제 {
 			답 : 6
 	*/
 	public static void solution(int a , int b , int c) {
-		
+		if(c == 1) {
+			System.out.println(a + b);
+		} else if(c == 2) {
+			System.out.println(a - b);
+		} else {
+			System.out.println(a * b);
+		}
 	}
 	
 	public static void main(String[] args) {
+		Random ran = new Random();
+		int a = ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		int c = ran.nextInt(3) + 1;
 		
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+		System.out.println("c = " + c);
+		
+		solution(a, b, c);
 	}
 
 }

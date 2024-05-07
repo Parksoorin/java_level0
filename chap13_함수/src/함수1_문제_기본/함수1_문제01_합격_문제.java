@@ -14,11 +14,18 @@ public class 함수1_문제01_합격_문제 {
 			불합격
 	*/
 	public static void solution(int a) {
-		
+		if(a >= 60 && a <= 100) {
+			System.out.println("합격");
+		} else {
+			System.out.println("불합격");
+		}
 	}
 	
 	public static void main(String[] args) {
-		
+		Random ran = new Random();
+		int score = ran.nextInt(101);
+		System.out.println(score);
+		solution(score);
 	}
 
 }
