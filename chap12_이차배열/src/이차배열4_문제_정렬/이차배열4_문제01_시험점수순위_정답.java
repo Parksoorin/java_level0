@@ -50,8 +50,6 @@ public class 이차배열4_문제01_시험점수순위_정답 {
 	        student[i][5] = count;
 	    }
 	   
-		
-		
 		// 내림차순은 -1 과 1을 서로 바꾸어 적으면된다. 
 		Arrays.sort(student, (a , b)->{
 			if(a[5] < b[5]) {
@@ -68,7 +66,6 @@ public class 이차배열4_문제01_시험점수순위_정답 {
 				}
 			}
 		});
-		
 		
 		for(int i = 0; i < student.length; i++) {
 			System.out.println(Arrays.toString(student[i]));

@@ -34,7 +34,43 @@ public class 이차배열4_문제01_시험점수순위_문제 {
 				[1002, 40, 43, 12, 95, 5]
 		
 		*/
-	
+		
+		for(int i = 0; i < student.length; i++) {
+			student[i][4] = student[i][1] + student[i][2] + student[i][3];
+		}
+		
+		for(int i = 0; i < student.length; i++) {
+			int cnt = 1;
+			for(int j = 0; j < student.length; j++) {
+				if(student[i][4] < student[j][4]) {
+					cnt++;
+				}
+			}
+			student[i][5] = cnt;
+			System.out.println(Arrays.toString(student[i]));
+		}
+		
+		System.out.println();
+		
+		Arrays.sort(student, (a, b) -> {
+			if(a[5] < b[5]) {
+				return -1;
+			} else if(a[5] > b[5]) {
+				return 1;
+			} else {
+				if(a[0] < b[0]) {
+					return 1;
+				}else if(a[0] > b[0]) {
+					return -1;
+				}else {
+					return 0;									
+				}
+			}
+		});
+		
+		for(int i = 0; i < student.length; i++) {
+			System.out.println(Arrays.toString(student[i]));
+		}
 
 	}
 

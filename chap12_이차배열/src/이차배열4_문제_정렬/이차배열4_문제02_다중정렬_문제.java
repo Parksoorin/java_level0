@@ -35,10 +35,30 @@ public class 이차배열4_문제02_다중정렬_문제 {
 				[1002, 이만수, B]
 				[1005, 이영희, B]
 				[1003, 최수정, C]
-	
-		
-		
+
 		*/
+		
+		// a[2].compareTo(b[2])는 문자열을 비교할 때 사용한다. 
+		// a가 앞에 있다면 음수 반환, 반대이면 양수를 반환한다. 
+		Arrays.sort(member, (a, b) -> {
+			if(a[2].compareTo(b[2]) > 0) {
+				return 1;
+			} else if(a[2].compareTo(b[2]) < 0) {
+				return -1;
+			} else {
+				if(a[1].compareTo(b[1]) < 0) {
+					return -1;
+				} else if(a[1].compareTo(b[1]) > 0) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		});
+		
+		for(int i = 0; i < member.length; i++) {
+			System.out.println(Arrays.toString(member[i]));
+		}
 		
 
 	}
