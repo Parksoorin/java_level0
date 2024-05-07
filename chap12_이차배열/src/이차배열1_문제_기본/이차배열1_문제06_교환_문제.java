@@ -24,7 +24,34 @@ public class 이차배열1_문제06_교환_문제 {
 	            [11, 18, 100]
 	            [26, 36, 39]    
 
-    */
+		  */
+		
+		Random ran = new Random();
+		int darr[][] = new int[3][3];
+		
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j ++) {
+				int r = ran.nextInt(100) + 1;
+				darr[i][j] = r;
+			}
+			System.out.println(Arrays.toString(darr[i]));
+		}
+	
+		int inum = ran.nextInt(3);
+		int jnum = ran.nextInt(3);
+		int inum2 = ran.nextInt(3);
+		int jnum2 = ran.nextInt(3);
+		
+		System.out.println("r1 = " + darr[inum][jnum]);
+		System.out.println("r2 = " + darr[inum2][jnum2]);
+		
+		int temp = darr[inum][jnum];
+		darr[inum][jnum] = darr[inum2][jnum2];
+		darr[inum2][jnum2] = temp;
+		
+		for(int i = 0; i < 3; i++) {
+			System.out.println(Arrays.toString(darr[i]));
+		}
 		
 	}
 

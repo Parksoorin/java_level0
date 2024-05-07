@@ -17,7 +17,31 @@ public class 이차배열1_문제04_기본_문제 {
 				[36, 64, 48]
 				195
 
-    */
+		  */
+		
+		Random ran = new Random();
+		int darr[][] = new int[3][3];
+		int sum = 0;
+		
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				int r = ran.nextInt(100) + 1;
+				darr[i][j] = r;
+			}
+			System.out.println(Arrays.toString(darr[i]));
+		}
+		
+		
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				if(darr[i][j] >= 50) {
+					System.out.println(darr[i][j]);
+					sum += darr[i][j];
+				}
+			}
+		}
+		
+		System.out.println(sum);
 		
 	}
 

@@ -18,8 +18,24 @@ public class 이차배열1_문제07_가장큰값_문제 {
 				96
 
 
-    */
+		  */
 		
+		Random ran = new Random();
+		int arr[][] = new int[3][3];
+		int max = 0;
+		
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				int r = ran.nextInt(100)+1;
+				arr[i][j] = r;
+				if(arr[i][j] > max) {
+					max = arr[i][j];
+				}
+			}
+			System.out.println(Arrays.toString(arr[i]));
+		}
+		System.out.println(max);
 	}
+
 
 }
