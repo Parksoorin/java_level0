@@ -24,7 +24,13 @@ public class 이차배열3_문제05_상품목록_문제 {
 	            total=370500
 	    */
 	    
+	    int total = 0;
 	    
+	    for(int i = 0; i < itemData.length; i++) {
+	    	total += Integer.parseInt(itemData[i][2]) * Integer.parseInt(itemData[i][3]); 
+	    }
+	    
+	    System.out.println(total);
 
 	}
 

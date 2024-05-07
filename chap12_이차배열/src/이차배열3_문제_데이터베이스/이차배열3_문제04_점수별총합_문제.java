@@ -27,6 +27,13 @@ public class 이차배열3_문제04_점수별총합_문제 {
 	    */   
 	    int[] total = {0,0,0};
 	
+	    for(int i = 0; i < student.length; i++) {
+    		total[0] += student[i][1];
+    		total[1] += student[i][2];
+    		total[2] += student[i][3];
+	    }
+	    
+	    System.out.println(Arrays.toString(total));
 	}
 
 }

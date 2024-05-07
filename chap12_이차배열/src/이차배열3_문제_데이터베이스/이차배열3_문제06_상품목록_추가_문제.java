@@ -26,9 +26,16 @@ public class 이차배열3_문제06_상품목록_추가_문제 {
 			[1002, 배, 2000, 12, 24000]
 			[1003, 딸기, 4000, 42, 168000]
 			[1004, 바나나, 1500, 55, 82500]
-    */
+		 */
+		
+		for(int i = 0; i < itemData.length; i++) {
+			int total = Integer.parseInt(itemData[i][2]) * Integer.parseInt(itemData[i][3]);
+			itemData[i][4] = total + "";
+		}
     
-	
+		for(int i = 0; i < itemData.length; i++){
+	    	System.out.println(Arrays.toString(itemData[i]));
+	    }
 		
 	}
 

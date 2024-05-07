@@ -22,8 +22,17 @@ public class 이차배열3_문제01_국어1등_문제 {
 	        [정답]         	
 	            1001    
 	    */
-	   
+		int index = 0;
+		int max = 0;
+		
+		for(int i = 0; i < student.length; i++) {
+			if(student[i][1] > max) {
+				max = student[i][1];
+				index = i;
+			}
+		}
 
+		System.out.println(student[index][0]);
 	}
 
 }
