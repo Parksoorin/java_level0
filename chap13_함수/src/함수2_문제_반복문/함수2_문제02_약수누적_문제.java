@@ -9,14 +9,19 @@ public class 함수2_문제02_약수누적_문제 {
 	}
 	
 	public static void main(String[] args) {
-		 /*
-         [문제] 
+		/*
+        [문제] 
             1~10 사이의 숫자를 랜덤으로 2개 저장하고,
             작은 숫자부터 큰 숫자까지의 합을 출력하는 함수를 만드시오.
         [예시]
             5, 3 ==> 3 + 4 + 5
             2, 6 ==> 2 + 3 + 4 + 5 + 6
-		  */
+		*/
 	
+		Random ran = new Random();
+		int a = ran.nextInt(10) + 1;
+		int b = ran.nextInt(10) + 1;
+		
+		
 	}
 }
