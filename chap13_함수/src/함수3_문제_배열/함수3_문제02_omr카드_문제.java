@@ -5,11 +5,20 @@ import java.util.Random;
 
 public class 함수3_문제02_omr카드_문제 {
 
-	public static void solution(int[] arr) {
-		
+	public static void solution(int[] arr, int[] omr) {
+		int cnt = 0;
+		for(int i = 0; i < 5; i++) {
+			if(arr[i] == omr[i]) {
+				cnt++;
+			}
+		}
+		System.out.println(cnt);
 	}
 	
 	public static void main(String[] args) {
+		
+		int [] arr = {1, 4, 3, 2, 1};
+		
 		/*
          	[문제]
          		int [] arr = {1, 4, 3, 2, 1};
@@ -22,5 +31,16 @@ public class 함수3_문제02_omr카드_문제 {
 				2
 	    */
 		
+		Random ran = new Random();
+		int omr[] = new int[5];
+		
+		for(int i = 0; i < 5; i++) {
+			int r = ran.nextInt(4) + 1;
+			omr[i] = r;
+		}
+		System.out.println("정답 = " + Arrays.toString(arr));
+		System.out.println("omr = " + Arrays.toString(omr));
+		
+		solution(arr, omr);
 	}
 }
