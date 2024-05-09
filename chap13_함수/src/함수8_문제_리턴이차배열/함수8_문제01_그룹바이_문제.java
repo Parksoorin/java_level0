@@ -4,10 +4,64 @@ import java.util.Arrays;
 
 public class 함수8_문제01_그룹바이_문제 {	
 	
+	private static String[][] getViewList(String[][] itemList) {
+		// 이차배열 테이블 만들어서 반환
+		String viewList[][] = new String[itemList.length][3];
+		for(int i = 0; i < itemList.length; i++) {
+			viewList[i][0] = itemList[i][0] + "";
+			viewList[i][1] = itemList[i][1] + "";
+			viewList[i][2] = "0";
+		}
+		
+		return viewList;
+	}
+
+	private static void updateViewList(String[][] viewList, int[][] orderList) {
+		// 만들어둔 테이블 업데이트
+		for(int i = 0; i < viewList.length; i++) {
+			for(int j = 0; j < orderList.length; j++) {
+				if(Integer.parseInt(viewList[i][0]) == orderList[j][1]) {
+					int cnt = Integer.parseInt(viewList[i][2]);
+					cnt++;
+					viewList[i][2] = cnt + "";
+				}
+			}
+		}
+	}
 	
+	private static void sortList(String[][] viewList) {
+		// 정렬
+		Arrays.sort(viewList, (a, b) -> {
+			if(a[2].compareTo(b[2]) < 0) {
+				return 1;
+			} else if(a[2].compareTo(b[2]) > 0) {
+				return -1;
+			} else {
+				if((a[0].compareTo(b[0]) < 0)) {
+					return -1;
+				} else if(a[0].compareTo(b[0]) > 0) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		});
+	}
+
+	private static void printViewList(String[][] viewList) {
+		// 출력
+		for(int i = 0; i < viewList.length; i++) {
+			if(Integer.parseInt(viewList[i][2]) == 0) {
+				continue;
+			} else {
+				System.out.println(Arrays.toString(viewList[i]));				
+			}
+		}
+	}
+
 	
 	public static void main(String[] args) {	
-		 /*
+		/*
         [문제]
             memberList는 회원목록데이터이다.
             순서대로 회원번호 , 회원이름 이다.
@@ -31,44 +85,49 @@ public class 함수8_문제01_그룹바이_문제 {
 			[100004, 칸쵸, 2]
 			[100007, 고구마깡, 2]
 			[100006, 빼빼로, 1]
-		  */	
+		*/	
 	    String[][] memberList = {
-		        {"3001","이만수"},
-		        {"3002","김철민"},
-		        {"3003","이영희"},
-		        {"3004","조성아"},
-		        {"3005","박민재"},
-		        {"3006","유재석"}
-		    };
+	        {"3001","이만수"},
+	        {"3002","김철민"},
+	        {"3003","이영희"},
+	        {"3004","조성아"},
+	        {"3005","박민재"},
+	        {"3006","유재석"}
+	    };
 
-		    String[][] itemList = {
-		        {"100001", "고래밥"},
-		        {"100002", "새우깡"},
-		        {"100003", "감자깡"},
-		        {"100004", "칸쵸"},
-		        {"100005", "오징어땅콩"},
-		        {"100006", "빼빼로"},
-		        {"100007", "고구마깡"},
-		        {"100008", "포카칩"}
-		    };
+	    String[][] itemList = {
+	        {"100001", "고래밥"},
+	        {"100002", "새우깡"},
+	        {"100003", "감자깡"},
+	        {"100004", "칸쵸"},
+	        {"100005", "오징어땅콩"},
+	        {"100006", "빼빼로"},
+	        {"100007", "고구마깡"},
+	        {"100008", "포카칩"}
+	    };
 
-		    int[][] orderList = {
-		        {3001, 100001},
-		        {3001, 100002},
-		        {3003, 100001},
-		        {3002, 100007},
-		        {3003, 100006},
-		        {3005, 100007},
-		        {3002, 100001},
-		        {3001, 100003},
-		        {3003, 100002},
-		        {3001, 100001},
-		        {3002, 100003},
-		        {3001, 100004},
-		        {3003, 100004},
-		        {3004, 100001}
-		    };
+	    int[][] orderList = {
+	        {3001, 100001},
+	        {3001, 100002},
+	        {3003, 100001},
+	        {3002, 100007},
+	        {3003, 100006},
+	        {3005, 100007},
+	        {3002, 100001},
+	        {3001, 100003},
+	        {3003, 100002},
+	        {3001, 100001},
+	        {3002, 100003},
+	        {3001, 100004},
+	        {3003, 100004},
+	        {3004, 100001}
+	    };
 
+	    String[][] viewList = getViewList(itemList);
+	    //printViewList(viewList);		    
+	    updateViewList(viewList, orderList);		    
+	    sortList(viewList);		    
+	    printViewList(viewList);
 		   
 	}
 }
