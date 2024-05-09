@@ -3,7 +3,15 @@ package 함수4_문제_이차배열;
 public class 함수4_문제01_연산자게임_문제 {
 
 	public static void solution(String[][] arr) {
-		
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i][2] == "+") {
+				System.out.println((Integer.parseInt(arr[i][0]) + Integer.parseInt(arr[i][1])));
+			} else if(arr[i][2] == "-") {
+				System.out.println((Integer.parseInt(arr[i][0]) - Integer.parseInt(arr[i][1])));
+			} else if(arr[i][2] == "*") {
+				System.out.println((Integer.parseInt(arr[i][0]) * Integer.parseInt(arr[i][1])));
+			}
+		}
 	}
 	
 	public static void main(String[] args) {

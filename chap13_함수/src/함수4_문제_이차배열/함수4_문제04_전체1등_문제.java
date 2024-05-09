@@ -1,10 +1,21 @@
 package 함수4_문제_이차배열;
 
+import java.util.Arrays;
 
 public class 함수4_문제04_전체1등_문제 {
 
 	public static void solution(int[][] arr) {
+		int max = 0, index = 0;
 		
+		for(int i = 0; i < arr.length; i++) {
+			int total = arr[i][1] + arr[i][2] + arr[i][3]; 
+			if(total > max) {
+				max = total;
+				index = i;
+			}
+		}
+		
+		System.out.println(Arrays.toString(arr[index]));
 	}
 	
 	public static void main(String[] args) {

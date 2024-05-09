@@ -4,7 +4,13 @@ package 함수4_문제_이차배열;
 public class 함수4_문제02_압축풀기_문제 {
 
 	public static void solution(String[][] arr) {
-		
+		String b = new String();
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < Integer.parseInt(arr[i][1]); j++) {
+				b += (arr[i][0]); 
+			}
+		}
+		System.out.println(b);
 	}
 	
 	public static void main(String[] args) {
