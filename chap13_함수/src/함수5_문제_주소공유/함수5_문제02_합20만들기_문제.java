@@ -6,7 +6,18 @@ import java.util.Random;
 public class 함수5_문제02_합20만들기_문제 {
 
 	public static void solution(int[] arr) {
-		
+		Random ran = new Random();
+		while(true) {
+			int a = ran.nextInt(10) + 1;
+			int b = ran.nextInt(10) + 1;
+			int c = ran.nextInt(10) + 1;
+			if(a + b + c == 20) {
+				arr[0] = a;
+				arr[1] = b;
+				arr[2] = c;
+				break;
+			}
+		}
 		
 	}
 	

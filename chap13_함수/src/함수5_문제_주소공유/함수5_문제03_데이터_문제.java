@@ -5,7 +5,15 @@ import java.util.Arrays;
 public class 함수5_문제03_데이터_문제 {
 	
 	public static void solution(int[][] info, int[][] order , int[][] count) {
-		  
+		  for(int i = 0; i < info.length; i++) {
+			  for(int j = 0; j < order.length; j++) {
+				  if(info[i][0] == order[j][0]) {
+					  count[i][0] = info[i][0];
+					  count[i][1] += order[j][1];
+					  count[i][2] += order[j][1] * info[i][1];
+				  }
+			  }
+		  }
 	}
 	public static void main(String[] args) {
 		
@@ -26,7 +34,6 @@ public class 함수5_문제03_데이터_문제 {
 	            [1004, 2, 1600]
 	            [1005, 5, 11000]     
 	    */
-
 
 	    int[][] info = {
 	        {1001, 500},
@@ -56,7 +63,6 @@ public class 함수5_문제03_데이터_문제 {
 	    };
 
 	    solution(info, order, count);
-	  
 
 	    for(int i=0; i<count.length; i++) {
 	        System.out.println(Arrays.toString(count[i]));

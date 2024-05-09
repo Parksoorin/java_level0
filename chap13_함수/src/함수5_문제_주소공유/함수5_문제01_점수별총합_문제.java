@@ -5,7 +5,14 @@ import java.util.Arrays;
 public class 함수5_문제01_점수별총합_문제 {
 	
 	public static void solution(int[][] student, int[] total) {
-		
+		int index = 1;
+		for(int i = 0; i < total.length; i++) {
+			for(int j = 0; j < student.length; j++) {
+				total[i] += student[j][index];
+			}
+			index++;
+		}
+		System.out.println(Arrays.toString(total));
 	}
 
 	public static void main(String[] args) {
@@ -15,12 +22,13 @@ public class 함수5_문제01_점수별총합_문제 {
 		        각각 국어, 수학, 영어 점수이다. 
 		*/
 		/*
-        [문제] 
-            각각 점수별총합을 아래 total배열에 추가하시오.
-            순서대로 국어 , 수학 , 영어 점수이다.
-        [정답]
-            299,149,217
-    */   
+	        [문제] 
+	            각각 점수별총합을 아래 total배열에 추가하시오.
+	            순서대로 국어 , 수학 , 영어 점수이다.
+	        [정답]
+	            299,149,217
+		 */   
+		
 		int[][] student = {
 		    {1001, 100, 20, 32},         // 152
 		    {1002,  40, 43, 12},         // 95
