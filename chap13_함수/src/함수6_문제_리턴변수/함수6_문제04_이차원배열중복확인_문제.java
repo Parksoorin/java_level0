@@ -5,8 +5,20 @@ import java.util.Random;
 public class 함수6_문제04_이차원배열중복확인_문제 {	
 	
 	public static boolean getCheckDoubleArr(int[][] arr, int a) {
+		int cnt = 0;
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				if(arr[i][j] == a) {
+					cnt++;
+				}
+			}
+		}
 		
-		return false;
+		if(cnt > 0) {
+			return true;
+		} else {
+			return false;			
+		}
 	}
 	public static void main(String[] args) {	
 		/*
@@ -21,5 +33,8 @@ public class 함수6_문제04_이차원배열중복확인_문제 {
     			{ 5, 21,  51, 32, 13}};
 		int num = 3;
 		
+		boolean a = getCheckDoubleArr(darr, num);
+		
+		System.out.println(a);
 	}
 }

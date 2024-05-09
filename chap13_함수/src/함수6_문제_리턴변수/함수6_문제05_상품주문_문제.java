@@ -4,8 +4,15 @@ package 함수6_문제_리턴변수;
 public class 함수6_문제05_상품주문_문제 {	
 	
 	public static int getTotal(int[] item, int[] price , int[] order) {
-		
-		return 0;
+		int total = 0;
+		for(int i = 0; i < item.length; i++) {
+			for(int j = 0; j < order.length; j++) {
+				if(item[i] == order[j]) {
+					total += price[i];
+				}
+			}
+		}
+		return total;
 	}
 	public static void main(String[] args) {	
 		/*
@@ -28,5 +35,9 @@ public class 함수6_문제05_상품주문_문제 {
 	    int[] price = { 500, 1200, 4300, 2300};
 
 	    int[] order = {1003, 1001, 1003, 1003, 1004, 1002, 1001};
+	    
+	    int total = getTotal(item, price , order);
+	    
+	    System.out.println(total);
   	}
 }

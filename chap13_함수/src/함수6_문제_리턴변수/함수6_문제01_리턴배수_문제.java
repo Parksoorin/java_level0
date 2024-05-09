@@ -5,7 +5,11 @@ import java.util.Random;
 public class 함수6_문제01_리턴배수_문제 {	
 	
 	public static boolean getMultiple(int a) {
-		return false;
+		if(a % 3 == 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	public static void main(String[] args) {	
 		/*
@@ -15,5 +19,18 @@ public class 함수6_문제01_리턴배수_문제 {
 	  		단 리턴함수를 사용하시오.
 		 */		
 		
+		Random ran = new Random();
+		int a = ran.nextInt(8) + 2;
+		int b = ran.nextInt(8) + 2;
+		System.out.println(a + " " + b);
+		
+		boolean c = getMultiple(a);
+		boolean d = getMultiple(b);
+		
+		if(c && d) {
+			System.out.println("당첨");
+		} else {
+			System.out.println("꽝");
+		}
 	}
 }
