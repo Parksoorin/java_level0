@@ -5,8 +5,22 @@ import java.util.Arrays;
 public class 함수7_문제01_비교짝수_문제 {	
 	
 	public static int[] getArrEven(int[] a, int[] b) {
+		int result[] = new int[a.length + b.length];
+		int index = 0;
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < b.length; j++) {
+				if(a[i] == b[j] && a[i] % 2 == 0) {
+					result[index] = a[i];
+					index++;
+				}
+			}
+		}
 		
-		return null;
+		int temp[] = new int[index];
+		for(int i = 0; i < index; i++) {
+			temp[i] = result[i];
+		}
+		return temp;
 	}
 	public static void main(String[] args) {	
 		/*
@@ -22,5 +36,7 @@ public class 함수7_문제01_비교짝수_문제 {
 		 int[] a = {1, 2, 7, 40, 3, 6};
 		 int[] b  = {1, 6, 2,  9, 3, 7};
 		
+		 int[] result = getArrEven(a, b);
+		 System.out.println(Arrays.toString(result));
 	}
 }

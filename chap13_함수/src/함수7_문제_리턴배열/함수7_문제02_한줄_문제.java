@@ -5,8 +5,17 @@ import java.util.Arrays;
 public class 함수7_문제02_한줄_문제 {
 
 	public static String[] solution(int[] number, String[] name, int[] score) {
-		
-		return null;
+		int index = 0;
+		String[] data = new String[number.length * 3];
+		for(int i = 0; i < number.length; i++) {
+			data[index] = number[i] + "";
+			index++;
+			data[index] = name[i] + "";
+			index++;
+			data[index] = score[i] + "";
+			index++;
+		}
+		return data;
 	}
 	
 	public static void main(String[] args) {
@@ -21,5 +30,9 @@ public class 함수7_문제02_한줄_문제 {
 		int[] number = {1001, 1002, 1003};
 		String[] name = {"김철수", "이만수", "조영민"};
 		int[] score = {32, 54, 12};
+		
+		String[] data = solution(number, name, score);
+		
+		System.out.println(Arrays.toString(data));
 	}
 }
