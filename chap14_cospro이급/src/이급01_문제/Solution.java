@@ -39,8 +39,22 @@ return 하도록 solution 메소드를 완성해주세요.
  */
 public class Solution {
 	 public int[] solution(String[] shirtSize) {
-	     int[] answer = {};
-	     return answer;
+		 int[] size_counter = new int[6];
+	        for(int i = 0; i < shirtSize.length; ++i) {
+	            if(shirtSize[i].equals("XS"))
+	               size_counter[0]++;
+	            else if(shirtSize[i].equals("S"))
+	                size_counter[1]++;
+	            else if(shirtSize[i].equals("M"))
+	                size_counter[2]++;
+	            else if(shirtSize[i].equals("L"))
+	                size_counter[3]++;
+	            else if(shirtSize[i].equals("XL"))
+	                size_counter[4]++;
+	            else if(shirtSize[i].equals("XXL"))
+	                size_counter[5]++;
+	        }
+	        return size_counter;
 	 }
 	 
 	 public static void main(String[] args) {
